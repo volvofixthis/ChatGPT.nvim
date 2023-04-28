@@ -59,6 +59,7 @@ local open_chat = function()
     local count = math.floor(speed)
 
     vim.api.nvim_win_call(chat_window.winid, function()
+      vim.cmd([[set modifiable]])
       vim.cmd([[normal! ]] .. count .. input)
     end)
   end
